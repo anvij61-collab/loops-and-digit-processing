@@ -1,0 +1,12 @@
+ques: Write a program to calculate sum first N terms of given series 1+ 1/2 + 1/3 + 1/4+..+1/n
+
+Scanner sc = new Scanner(System.in);
+
+int n = sc.nextInt();
+double sum = 0;
+
+for (int i = 1; i <= n; i++) {
+    sum = sum + (1.0 / i);
+}
+
+System.out.println("Sum = " + sum);
