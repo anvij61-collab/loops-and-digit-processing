@@ -1,0 +1,26 @@
+int n = 12121;
+int place = 1;
+
+while (n / place >= 10) {
+    place *= 10;
+}
+
+boolean palindrome = true;
+
+while (place > 1) {
+    int first = n / place;
+    int last = n % 10;
+
+    if (first != last) {
+        palindrome = false;
+        break;
+    }
+    n = (n % place) / 10;
+    place = place / 100;
+}
+
+if (palindrome) {
+    System.out.println("Palindrome");
+} else {
+    System.out.println("Not Palindrome");
+}
