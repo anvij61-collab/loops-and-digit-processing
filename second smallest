@@ -1,0 +1,18 @@
+int n =123456789;
+int smallest, secondssmallest = Integer.MAX_VALUE;
+int place =1;
+
+while(n>0){
+int rem = n%10;
+if(rem < smallest){
+secondsmallest = smallest;
+smallest = rem;
+}
+
+else if(rem >smallest && rem< secondsmallest){
+seconsmallest = rem
+}
+n = n/10;
+}
+sout(seconsmallest);
+sout(smallest);
