@@ -1,0 +1,15 @@
+class Solution {
+    public int minElement(int[] nums) {
+        int smallest = Integer.MAX_VALUE;
+        for (int num : nums) {
+            int sum = 0;
+            while (num > 0) {
+                int digit = num % 10;
+                sum += digit;
+                num = num / 10;
+            }
+            smallest = Math.min(sum, smallest);
+        }
+        return smallest;
+    }
+}
