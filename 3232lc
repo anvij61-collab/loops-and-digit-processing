@@ -1,0 +1,16 @@
+class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int sumOne = 0;
+        int sumTwo = 0;
+
+        for (int num : nums) {
+            if (num < 10) {
+                sumOne += num;
+            } else {
+                sumTwo += num;
+            }
+        }
+
+        return sumOne != sumTwo;
+    }
+}
